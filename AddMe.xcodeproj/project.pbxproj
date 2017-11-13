@@ -14,6 +14,8 @@
 		ED19AAB51FB6DAC6007946DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED19AAB31FB6DAC6007946DD /* LaunchScreen.storyboard */; };
 		ED19AAC01FB6DAC6007946DD /* AddMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19AABF1FB6DAC6007946DD /* AddMeTests.swift */; };
 		ED19AACB1FB6DAC6007946DD /* AddMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19AACA1FB6DAC6007946DD /* AddMeUITests.swift */; };
+		EDD6A8121FB9A00E0094F589 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6A8111FB9A00E0094F589 /* QRCodeScannerViewController.swift */; };
+		EDE1C99B1FB8405B0035FC40 /* ContactCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1C99A1FB8405B0035FC40 /* ContactCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		ED19AAC61FB6DAC6007946DD /* AddMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED19AACA1FB6DAC6007946DD /* AddMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeUITests.swift; sourceTree = "<group>"; };
 		ED19AACC1FB6DAC6007946DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD6A8111FB9A00E0094F589 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		EDE1C99A1FB8405B0035FC40 /* ContactCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				ED19AAAA1FB6DAC6007946DD /* AppDelegate.swift */,
 				ED19AAAC1FB6DAC6007946DD /* ViewController.swift */,
 				ED19AAAE1FB6DAC6007946DD /* Main.storyboard */,
+				EDE1C99A1FB8405B0035FC40 /* ContactCardViewController.swift */,
+				EDD6A8111FB9A00E0094F589 /* QRCodeScannerViewController.swift */,
 				ED19AAB11FB6DAC6007946DD /* Assets.xcassets */,
 				ED19AAB31FB6DAC6007946DD /* LaunchScreen.storyboard */,
 				ED19AAB61FB6DAC6007946DD /* Info.plist */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED19AAAD1FB6DAC6007946DD /* ViewController.swift in Sources */,
+				EDD6A8121FB9A00E0094F589 /* QRCodeScannerViewController.swift in Sources */,
 				ED19AAAB1FB6DAC6007946DD /* AppDelegate.swift in Sources */,
+				EDE1C99B1FB8405B0035FC40 /* ContactCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

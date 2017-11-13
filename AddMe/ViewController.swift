@@ -48,8 +48,12 @@ class ViewController: UIViewController {
         contact.birthday = birthday
         let fb = CNSocialProfile(urlString: "https://www.facebook.com/naman.kedia.5", username: "naman.kedia5", userIdentifier: "", service: "Facebook")
         let facebookLabeledValue = CNLabeledValue(label: "Facebook", value: fb)
-        contact.socialProfiles = [facebookLabeledValue]
-//        contactToVCard(contact: contact)
+        let snapchat = CNSocialProfile(urlString: "https://www.snapchat.com/add/joditheunicorn", username: "joditheunicorn", userIdentifier: "", service: "Snapchat")
+        let snapchatLabeledValue = CNLabeledValue(label: "Snapchat", value: snapchat)
+        let instagram = CNSocialProfile(urlString: "https://www.instagram.com/faridaeldeftar/", username: "faridaeldeftar", userIdentifier: "", service: "Instagram")
+        let instagramtLabeledValue = CNLabeledValue(label: "Instagram", value: instagram)
+        contact.socialProfiles = [facebookLabeledValue, snapchatLabeledValue, instagramtLabeledValue]
+        contactToVCard(contact: contact)
     }
     
     func saveContact(contact: CNMutableContact) {
@@ -64,7 +68,7 @@ class ViewController: UIViewController {
         let contacts = try? contactStore.unifiedContacts(matching: predicate, keysToFetch: keysToFetch as [CNKeyDescriptor])
         if let contacts = contacts {
             let contact = contacts.first
-            contactToVCard(contact: contact!)
+//            contactToVCard(contact: contact!)
         }
     }
     
