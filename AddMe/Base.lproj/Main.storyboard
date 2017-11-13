@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CMd-qJ-06P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lPV-xZ-lwp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="39"/>
+            <point key="canvasLocation" x="-759" y="36"/>
         </scene>
         <!--Contact Card View Controller-->
         <scene sceneID="F5u-gS-ZCm">
@@ -223,6 +223,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRA-hV-ANE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="703" y="59"/>
+        </scene>
+        <!--Code Scanner View Controller-->
+        <scene sceneID="dYV-JK-ZQh">
+            <objects>
+                <viewController id="lPV-xZ-lwp" customClass="QRCodeScannerViewController" customModule="AddMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEy-D2-AyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cgu-hz-JT5"/>
+                    </view>
+                    <connections>
+                        <segue destination="CMd-qJ-06P" kind="show" identifier="QRCodeToContactSegueID" id="0UO-og-U5l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqE-wl-5aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="36"/>
         </scene>
     </scenes>
 </document>

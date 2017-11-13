@@ -24,7 +24,7 @@ class ContactCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactCard = getMyContact()
+//        contactCard = getMyContact()
         if let contactCard = contactCard {
             nameLabel.text = contactCard.givenName + " " + contactCard.familyName
             nicknameLabel.text = contactCard.nickname
@@ -63,9 +63,12 @@ class ContactCardViewController: UIViewController {
             
             let socialProfiles = contactCard.socialProfiles
             for i in 0..<5 {
-                let socialProfile = socialProfiles[i].value
-                socialMediaProfiles[i].setTitle(socialProfile.service, for: .normal)
-                socialMediaProfiles[i].tag = i
+                if (socialProfiles.count > i) {
+                    let socialProfile = socialProfiles[i].value
+                    socialMediaProfiles[i].setTitle(socialProfile.service, for: .normal)
+                    socialMediaProfiles[i].tag = i
+                }
+                
 //            socialMediaProfiles[i].setValue(socialProfile.urlString, forUndefinedKey: "link")
             }
         }
