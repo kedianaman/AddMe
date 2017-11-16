@@ -28,6 +28,7 @@ class ContactCardViewController: UIViewController {
         if let contactCard = contactCard {
             nameLabel.text = contactCard.givenName + " " + contactCard.familyName
             nicknameLabel.text = contactCard.nickname
+            
             if let imageData = contactCard.imageData {
                 let thumbnailImage = UIImage(data: imageData)
                 thumbnailImageView.image = thumbnailImage

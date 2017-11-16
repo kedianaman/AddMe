@@ -68,10 +68,13 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
             if metadataObj.stringValue != nil {
                 // Check here if QR code is valid
                 let contactStringData = metadataObj.stringValue
+                print(contactStringData)
                 if let data = contactStringData?.data(using: .utf8) {
                     do {
                         let contacts = try CNContactVCardSerialization.contacts(with: data)
+                        
                         contact = contacts.first
+                        
                         captureSession?.stopRunning()
                     } catch {
                         print("couldn't convert QR Code to VCard")

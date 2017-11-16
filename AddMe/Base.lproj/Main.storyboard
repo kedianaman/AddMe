@@ -81,15 +81,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sci-9U-uCK">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="83.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-CZ-96X">
-                                                <rect key="frame" x="0.0" y="27" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call icon" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-CZ-96X">
+                                                <rect key="frame" x="0.0" y="22" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="8zf-W5-Dfu"/>
-                                                    <constraint firstAttribute="width" constant="30" id="sAJ-YP-cmW"/>
+                                                    <constraint firstAttribute="height" constant="40" id="8zf-W5-Dfu"/>
+                                                    <constraint firstAttribute="width" constant="40" id="sAJ-YP-cmW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1 408-666-2330" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9N-iY-S8q">
-                                                <rect key="frame" x="40" y="31.5" width="295" height="20.5"/>
+                                                <rect key="frame" x="50" y="31.5" width="285" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -99,15 +99,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0qs-wQ-VHo">
                                         <rect key="frame" x="0.0" y="83.5" width="335" height="83.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttb-uX-njF">
-                                                <rect key="frame" x="0.0" y="27" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Birthday Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ttb-uX-njF">
+                                                <rect key="frame" x="0.0" y="22" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="BF6-fC-3ZM"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Sto-ch-89e"/>
+                                                    <constraint firstAttribute="width" constant="40" id="BF6-fC-3ZM"/>
+                                                    <constraint firstAttribute="width" secondItem="ttb-uX-njF" secondAttribute="height" multiplier="1:1" id="Y5a-g6-72r"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 27, 1998" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbr-Hj-Ui0">
-                                                <rect key="frame" x="40" y="31.5" width="295" height="20.5"/>
+                                                <rect key="frame" x="50" y="31.5" width="285" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,15 +117,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsr-Zz-EGT">
                                         <rect key="frame" x="0.0" y="167" width="335" height="83.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-6Z-ptP">
-                                                <rect key="frame" x="0.0" y="27" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mail Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-6Z-ptP">
+                                                <rect key="frame" x="0.0" y="22" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="F3J-uW-a7g"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Wcg-FK-zQs"/>
+                                                    <constraint firstAttribute="width" constant="40" id="F3J-uW-a7g"/>
+                                                    <constraint firstAttribute="width" secondItem="Upd-6Z-ptP" secondAttribute="height" multiplier="1:1" id="d1y-wu-QNA"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nkedia@usc.edu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-zi-H2O">
-                                                <rect key="frame" x="40" y="31.5" width="295" height="20.5"/>
+                                                <rect key="frame" x="50" y="31.5" width="285" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -135,15 +135,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IWD-v0-iPP">
                                         <rect key="frame" x="0.0" y="250.5" width="335" height="83.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFP-ZP-hec">
-                                                <rect key="frame" x="0.0" y="27" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location Icon" translatesAutoresizingMaskIntoConstraints="NO" id="qFP-ZP-hec">
+                                                <rect key="frame" x="0.0" y="22" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="2gS-Jz-K4A"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Z8m-zP-jkB"/>
+                                                    <constraint firstAttribute="width" constant="40" id="2gS-Jz-K4A"/>
+                                                    <constraint firstAttribute="width" secondItem="qFP-ZP-hec" secondAttribute="height" multiplier="1:1" id="c0c-OU-9BO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92G-8P-4Wr">
-                                                <rect key="frame" x="40" y="31.5" width="295" height="20.5"/>
+                                                <rect key="frame" x="50" y="31.5" width="285" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -243,4 +243,10 @@
             <point key="canvasLocation" x="-33" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Birthday Icon" width="92" height="92"/>
+        <image name="Call icon" width="92" height="92"/>
+        <image name="Location Icon" width="92" height="92"/>
+        <image name="Mail Icon" width="92" height="92"/>
+    </resources>
 </document>

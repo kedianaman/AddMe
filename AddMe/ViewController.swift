@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         let instagram = CNSocialProfile(urlString: "https://www.instagram.com/faridaeldeftar/", username: "faridaeldeftar", userIdentifier: "", service: "Instagram")
         let instagramtLabeledValue = CNLabeledValue(label: "Instagram", value: instagram)
         contact.socialProfiles = [facebookLabeledValue, snapchatLabeledValue, instagramtLabeledValue]
-        contactToVCard(contact: contact)
+//        contactToVCard(contact: contact)
     }
     
     func saveContact(contact: CNMutableContact) {
@@ -63,19 +63,27 @@ class ViewController: UIViewController {
     }
     
     func fetchContacts() {
-        let predicate: NSPredicate = CNContact.predicateForContacts(matchingName: "Shubham Kedia")
-        let keysToFetch = [CNContactVCardSerialization.descriptorForRequiredKeys()]
-        let contacts = try? contactStore.unifiedContacts(matching: predicate, keysToFetch: keysToFetch as [CNKeyDescriptor])
+        let predicate: NSPredicate = CNContact.predicateForContacts(matchingName: "Naman Kedia")
+        let keysToFetch = [CNContactVCardSerialization.descriptorForRequiredKeys(), CNContactImageDataAvailableKey] as [Any]
+        let contacts = try? contactStore.unifiedContacts(matching: predicate, keysToFetch: keysToFetch as! [CNKeyDescriptor])
         if let contacts = contacts {
             let contact = contacts.first
-//            contactToVCard(contact: contact!)
+            contactToVCard(contact: contact!)
         }
     }
     
     func contactToVCard(contact: CNContact) {
         do {
+            
             let data = try CNContactVCardSerialization.data(with: [contact])
             print(data.description)
+            let dataWithImage = try CNContactVCardSerialization.data(jpegPhotoContacts: [contact])
+            
+            let dataString = String(data: dataWithImage, encoding: String.Encoding.utf8)
+            print(dataString)
+            
+            //https://stackoverflow.com/questions/39638149/how-to-get-vcf-data-with-contact-images-using-cncontactvcardserialization-datawi
+
             if let filter = CIFilter(name: "CIQRCodeGenerator") {
                 filter.setValue(data, forKey: "inputMessage")
                 let transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -101,5 +109,37 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+import Foundation
+import Contacts
+
+extension CNContactVCardSerialization {
+    internal class func vcardDataAppendingPhoto(vcard: Data, photoAsBase64String photo: String) -> Data? {
+        let vcardAsString = String(data: vcard, encoding: .utf8)
+        let vcardPhoto = "PHOTO;TYPE=JPEG;ENCODING=BASE64:".appending(photo)
+        let vcardPhotoThenEnd = vcardPhoto.appending("\nEND:VCARD")
+        if let vcardPhotoAppended = vcardAsString?.replacingOccurrences(of: "END:VCARD", with: vcardPhotoThenEnd) {
+            return vcardPhotoAppended.data(using: .utf8)
+        }
+        return nil
+        
+    }
+    class func data(jpegPhotoContacts: [CNContact]) throws -> Data {
+        
+        var overallData = Data()
+        for contact in jpegPhotoContacts {
+            let data = try CNContactVCardSerialization.data(with: [contact])
+            if contact.imageDataAvailable {
+                if let base64imageString = contact.imageData?.base64EncodedString(),
+                    let updatedData = vcardDataAppendingPhoto(vcard: data, photoAsBase64String: base64imageString) {
+                    overallData.append(updatedData)
+                }
+            } else {
+                overallData.append(data)
+            }
+        }
+        return overallData
+    }
 }
 
