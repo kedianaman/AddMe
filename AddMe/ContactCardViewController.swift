@@ -69,8 +69,6 @@ class ContactCardViewController: UIViewController {
                     socialMediaProfiles[i].setTitle(socialProfile.service, for: .normal)
                     socialMediaProfiles[i].tag = i
                 }
-                
-//            socialMediaProfiles[i].setValue(socialProfile.urlString, forUndefinedKey: "link")
             }
         }
     }
@@ -91,9 +89,7 @@ class ContactCardViewController: UIViewController {
                     print("opened url")
             })
         }
-        
-       
-        
+
     }
     
     
